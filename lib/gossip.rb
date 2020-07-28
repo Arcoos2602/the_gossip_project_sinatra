@@ -34,6 +34,3 @@ class Gossip
     end
 
 end
-
-Gossip#.new("llll", "llllll").save
-Gossip.update("1", "dzqdzq", "zqddzqz")
