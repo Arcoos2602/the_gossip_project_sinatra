@@ -29,5 +29,11 @@ class Gossip
       gossips = self.all
       gossips[id.to_i].author = author
       gossips[id.to_i].content = content
+      CSV.open("db/gossip.csv", "w") { |csv| }
+		  CSV.open("db/gossip.csv", "w") { |csv| gossips.each { |gossip| gossip.save }}
     end
+
 end
+
+Gossip#.new("llll", "llllll").save
+Gossip.update("1", "dzqdzq", "zqddzqz")
